@@ -1,7 +1,14 @@
-Class 'StripeProvider' is public, should be declared in a file named 'StripeProvider.java'
+package com.eshopuniverse;
 
-'SquareProvider()' cannot be applied to '(java.lang.String)'
-'AuthorizeNetProvider()' cannot be applied to '(java.lang.String)'
-'AlipayProvider()' cannot be applied to '(java.lang.String)'
+public class SquareProvider implements PaymentProvider {
+    private String username;
 
-java: class StripeProvider is public, should be declared in a file named StripeProvider.java
+    public SquareProvider(String username) {
+        this.username = username;
+    }
+
+    @Override
+    public String getToken() {
+        return username + ":square";
+    }
+}
