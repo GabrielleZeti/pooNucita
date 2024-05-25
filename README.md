@@ -1,14 +1,14 @@
 package com.eshopuniverse;
 
-public class AuthorizeNetProvider implements PaymentProvider {
+public class AlipayProvider implements PaymentProvider {
     private String username;
 
-    public AuthorizeNetProvider(String username) {
+    public AlipayProvider(String username) {
         this.username = username;
     }
 
     @Override
     public String getToken() {
-        return username + ":authorize.net";
+        return username + ":alipay";
     }
 }
