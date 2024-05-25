@@ -1,14 +1,14 @@
 package com.eshopuniverse;
 
-public class SquareProvider implements PaymentProvider {
+public class AuthorizeNetProvider implements PaymentProvider {
     private String username;
 
-    public SquareProvider(String username) {
+    public AuthorizeNetProvider(String username) {
         this.username = username;
     }
 
     @Override
     public String getToken() {
-        return username + ":square";
+        return username + ":authorize.net";
     }
 }
